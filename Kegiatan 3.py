@@ -8,5 +8,5 @@ Kota = data.readline()
 data.close()
 
 data = shelve.open("Ganno")
-data["newdata"] = [NIM, TTL, Nama, Kota]
+data["newdata"] = [NIM, TL, Nama, Kota]
 data.close()
