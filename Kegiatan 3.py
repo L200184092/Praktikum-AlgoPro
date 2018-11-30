@@ -1,15 +1,12 @@
-x = input("Masukkan Nama Saudara : ")
-y = float(input("Pukul berapa sekarang ? : "))
-if y > 20.00 :
-    y = "Malam"
-elif y > 18.00:
-    y = "Petang"
-elif y > 15.00:
-    y = "Sore"
-elif y > 12.00:
-    y = "Siang"
-elif y> 06.00:
-    y = "Pagi"
-print("Selamat " + y + " " + x)
-    
-    
+import shelve
+
+data = open("L200184092", "r")
+NIM = data.readline()
+TL = data.readline()
+Nama = data.readline()
+Kota = data.readline()
+data.close()
+
+data = shelve.open("Ganno")
+data["newdata"] = [NIM, TTL, Nama, Kota]
+data.close()
